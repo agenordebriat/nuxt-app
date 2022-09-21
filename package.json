@@ -1,0 +1,56 @@
+{
+  "private": true,
+  "engines": {
+    "node": "16.17.0",
+    "yarn": "1.22.19"
+  },
+  "packageManager": "yarn@1.22.19",
+  "scripts": {
+    "build": "nuxi build",
+    "dev": "yarn && nuxi dev --host localhost",
+    "generate": "nuxi generate",
+    "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:stylelint",
+    "lint:eslint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint:prettier": "prettier -c . -u",
+    "lint:stylelint": "stylelint **/*.{css,vue} -i .gitignore",
+    "postinstall": "nuxi prepare",
+    "preinstall": "npx -y only-allow yarn",
+    "prepare": "husky install",
+    "preview": "nuxi preview",
+    "scaffold": "nuxi add"
+  },
+  "devDependencies": {
+    "@formkit/nuxt": "^1.0.0-beta.12-026872a",
+    "@formkit/themes": "^1.0.0-beta.11",
+    "@nuxt/image-edge": "^1.0.0-27719579.87dcdf2",
+    "@nuxtjs/google-fonts": "^3.0.0-0",
+    "@nuxtjs/tailwindcss": "^5.3.3",
+    "@pinia/nuxt": "^0.4.2",
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "@vueuse/core": "^9.3.0",
+    "@vueuse/nuxt": "^9.3.0",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.6.0",
+    "gitmoji-cli": "^6.3.0",
+    "husky": "^8.0.1",
+    "nuxt": "^3.0.0-rc.11",
+    "nuxt-icon": "^0.1.6",
+    "postcss-html": "^1.5.0",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "stylelint": "^14.13.0",
+    "stylelint-config-clean-order": "^0.9.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^28.0.0",
+    "stylelint-config-standard-vue": "^1.0.0"
+  },
+  "gitmoji": {
+    "autoAdd": false,
+    "emojiFormat": "emoji",
+    "scopePrompt": true,
+    "gitmojisUrl": "https://gitmoji.dev/api/gitmojis"
+  }
+}

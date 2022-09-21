@@ -1,0 +1,18 @@
+{
+  "extends": ["plugin:nuxt/recommended", "plugin:vue/vue3-recommended", "plugin:prettier/recommended"],
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "rules": {
+    "quote-props": ["error", "consistent"],
+    "vue/component-tags-order": [
+      "error",
+      {
+        "order": ["script", "template", "style"]
+      }
+    ],
+    "vue/multi-word-component-names": "off",
+    "vue/padding-line-between-blocks": ["error", "always"],
+    "vue/singleline-html-element-content-newline": "off"
+  }
+}
